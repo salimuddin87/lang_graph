@@ -1,0 +1,14 @@
+# This file lists the dependencies for a Python project using LangChain and related libraries.
+langgraph
+langchain
+langchain-tavily
+langchain-openai
+langchain-mcp-adapters
+mcp
+
+# Tracking and evaluation of models
+langsmith
+
+# Optional dependencies for specific features
+ipython
+python-dotenv
