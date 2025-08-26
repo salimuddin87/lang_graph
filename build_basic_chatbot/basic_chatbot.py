@@ -33,7 +33,7 @@ llm = ChatOpenAI(
     max_tokens=None,
     timeout=None,
     max_retries=2,
-    api_key="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",
+    api_key="OPENAI_API_KEY",
     http_client=httpx.Client(verify=False)  # disables SSL check
 )
 
