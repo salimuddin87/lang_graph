@@ -30,16 +30,16 @@ graph_builder = StateGraph(State)
 
 # os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
-# llm = init_chat_model("openai:gpt-4.1")
-llm = ChatOpenAI(
-    model="gpt-4o",
-    temperature=0,
-    max_tokens=None,
-    timeout=None,
-    max_retries=2,
-    api_key=os.getenv("OPENAI_API_KEY"),
-    http_client=httpx.Client(verify=False)  # disables SSL check
-)
+llm = init_chat_model("ollama:gemma3:1b", temperature=0)
+# llm = ChatOpenAI(
+#     model="gpt-4o",
+#     temperature=0,
+#     max_tokens=None,
+#     timeout=None,
+#     max_retries=2,
+#     api_key=os.getenv("OPENAI_API_KEY"),
+#     http_client=httpx.Client(verify=False)  # disables SSL check
+# )
 
 
 def chatbot(state: State):
