@@ -12,6 +12,10 @@ import os
 from langchain.chat_models import init_chat_model
 
 from IPython.display import Image, display
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 
 class State(TypedDict):
@@ -24,7 +28,7 @@ class State(TypedDict):
 # Create a StateGraph which defines the structure of out chatbot as a "state machine".
 graph_builder = StateGraph(State)
 
-# os.environ["OPENAI_API_KEY"] = ""
+# os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
 # llm = init_chat_model("openai:gpt-4.1")
 llm = ChatOpenAI(
@@ -33,7 +37,7 @@ llm = ChatOpenAI(
     max_tokens=None,
     timeout=None,
     max_retries=2,
-    api_key="OPENAI_API_KEY",
+    api_key=os.getenv("OPENAI_API_KEY"),
     http_client=httpx.Client(verify=False)  # disables SSL check
 )
 

@@ -1,20 +1,25 @@
 # This file lists the dependencies for a Python project using LangChain and related libraries.
 
 langchain
+langchain-core
 langchain-tavily
 langchain-openai
+langchain-google-genai
+langchain-community
+langchain-ollama
 
 # MCP servers for tool and resource integration
 langchain-mcp-adapters
 
-langchain-google-genai
 google-generativeai
 
 mcp
 
 langgraph
+
 # Tools for building supervisor agents
 langgraph-supervisor
+
 # Tools for building swarm multi-agent systems
 langgraph-swarm
 
@@ -34,6 +39,7 @@ langgraph-cli[inmem]
 httpx
 python-dotenv
 ipython
+ollama
 
 # To use Jupyter notebooks
 jupyter
